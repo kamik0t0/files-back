@@ -13,7 +13,7 @@ module.exports = function (req, res) {
             if (error) {
                 return res.status(400).json(error);
             } else {
-                return res.status(200).json({ result: "folder renamed" });
+                return res.status(200).json({ newName: newName });
             }
         }
     );

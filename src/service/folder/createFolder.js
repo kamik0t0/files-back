@@ -3,8 +3,9 @@ const pathModule = require("path");
 const ROOTPATH = pathModule.resolve("./uploads");
 
 module.exports = function ({ path, folderName }) {
+    console.log(6, path);
     try {
-        if (path !== undefined) {
+        if (path !== false) {
             fs.mkdirSync(
                 pathModule.resolve(ROOTPATH + "/" + path + "/" + folderName)
             );
